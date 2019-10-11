@@ -27,7 +27,7 @@ body {
 /* Rectangler Componet Styles */
 .rectangular-box {
   width: 400px;
-  height: 200px;
+  height: 210px;
   background-image: linear-gradient(to right, red, orange);
   border: 1px solid red;
   margin: 3px auto;
@@ -50,6 +50,11 @@ body {
 
 .uppercase-text {
   text-transform: uppercase;
+}
+.icon-style {
+  /* background-color: orange; */
+  color: orange;
+  font-size: 2rem;
 }
 
 /* SearchForm styles */
@@ -74,7 +79,11 @@ input[type='text']:focus {
   }
 }
 .find-button {
-  background-color: orange;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(235, 114, 78),
+    rgb(238, 174, 101)
+  );
   color: white;
   font-size: 1rem;
   border-radius: 25px;
@@ -84,4 +93,40 @@ input[type='text']:focus {
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
+}
+.find-button:hover {
+  box-shadow: 2px 2px 3px 1px grey;
+}
+
+/* SOCIAL STUFF */
+.social-container {
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  height: 100px;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
 }
