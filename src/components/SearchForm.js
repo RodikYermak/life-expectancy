@@ -8,11 +8,12 @@ const SearchForm = () => {
       <form>
         <input
           type='text'
-          placeholder='Enter your street address or Zip code'
+          placeholder='Enter census tract number ex.0000.00'
           className='inputSection'
         />
         <button className='find-button'>Find</button>
       </form>
+      <p className='api'>API https://data.cdc.gov/resource/5h56-n989.json</p>
     </div>
   );
 };

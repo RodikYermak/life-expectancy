@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //   faInstagram
 // } from '@fortawesome/free-brands-svg-icons';
 
-const Reactangler = ({ iconname, area, years }) => {
+const Reactangler = ({ iconname, area, years, text }) => {
   return (
     <div className='rectangular-box'>
       <ul className='unordered-list'>
@@ -19,7 +19,7 @@ const Reactangler = ({ iconname, area, years }) => {
 
         <li className='area'>{area}</li>
         <li className='years'>{years}</li>
-        <li className='uppercase-text'>years</li>
+        <li className='uppercase-text'>{text}</li>
       </ul>
     </div>
   );

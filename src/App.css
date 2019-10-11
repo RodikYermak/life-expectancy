@@ -38,7 +38,7 @@ body {
 }
 
 .area {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: Montserrat, sans-serif;
   text-transform: capitalize;
   line-height: 1.8;
@@ -58,6 +58,11 @@ body {
 }
 
 /* SearchForm styles */
+h1,
+::placeholder,
+h3 {
+  font-family: Roboto;
+}
 .inputSection {
   width: 290px;
   height: 50px;
@@ -129,4 +134,9 @@ a.twitter {
 
 a.instagram {
   color: black;
+}
+
+/* API link style */
+.api {
+  font-size: 0.7rem;
 }
