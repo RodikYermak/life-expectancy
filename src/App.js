@@ -3,6 +3,7 @@ import './App.css';
 import Rectangler from './components/Rectangler';
 import SearchForm from './components/SearchForm';
 import SocialFollow from './components/SocialFollow';
+import MyLocation from './components/MyLocation';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faYoutube,
@@ -49,6 +50,7 @@ class App extends React.Component {
       return (
         <div>
           <SearchForm />
+          <MyLocation />
           {/* <Rectangler iconname={faFacebook} area='my area' years='78.20' /> */}
           <Rectangler
             iconname={faFacebook}
