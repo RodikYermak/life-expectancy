@@ -1,19 +1,28 @@
 import React from 'react';
 import '../App.css';
 
-const SearchForm = () => {
+const SearchForm = ({ apiUrl = 'Default Unknown', value }) => {
+  const handleChange = event => {
+    value = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    alert('A census tract number was entered: ' + value);
+    event.preventDefault();
+  };
   return (
     <div className='App'>
-      <h1>Life Expectancy App</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           placeholder='Enter census tract number ex.0000.00'
           className='inputSection'
+          value={value}
+          onChange={handleChange}
         />
-        <button className='find-button'>Find</button>
+        <input type='submit' value='Submit' className='find-button' />
       </form>
-      <p className='api'>API https://data.cdc.gov/resource/5h56-n989.json</p>
+      <p className='api'>API {apiUrl}</p>
     </div>
   );
 };

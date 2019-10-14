@@ -16,7 +16,9 @@ const MyLocation = () => {
 
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-      mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+      mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} ° 
+      To get the address Use this API: 
+      https://api.geocod.io/v1.4/reverse?q=${latitude} ,${longitude}&api_key=ddb3db35dd8a8933ca8c9ab6635b3b6dcb99a5b`;
     }
 
     function error() {

@@ -10,14 +10,15 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #eee;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
+  margin-top: 0;
 }
 
 .App-link {
@@ -136,21 +137,6 @@ a.instagram {
 .api {
   font-size: 0.7rem;
 }
-
-/* Birthday List */
-.birthday-list li {
-  display: inline-block;
-  list-style: none;
-  font-size: 0.3rem;
-  position: relative;
-}
-.age {
-  position: absolute;
-  top: -30px;
-}
-/* .year {
-  position: absolute;
-} */
 
 /* MyLocation Button */
 .mylocation-button {

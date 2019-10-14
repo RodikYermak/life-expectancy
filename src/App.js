@@ -1,31 +1,37 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
 import Rectangler from './components/Rectangler';
 import SearchForm from './components/SearchForm';
 import SocialFollow from './components/SocialFollow';
 import MyLocation from './components/MyLocation';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
-  faYoutube,
-  faFacebook,
-  faTwitter,
-  faInstagram
-} from '@fortawesome/free-brands-svg-icons';
+  faHome,
+  faFlagUsa,
+  faCannabis,
+  faCity
+} from '@fortawesome/free-solid-svg-icons';
 
 class App extends React.Component {
   state = {
     items: [],
     error: null,
-    isLoaded: false
+    isLoaded: false,
+    apiUrl: 'empty link'
   };
 
   componentDidMount() {
-    const url = 'https://data.cdc.gov/resource/5h56-n989.json';
+    // const url = 'https://data.cdc.gov/resource/5h56-n989.json';
+    const url =
+      // 'https://data.cdc.gov/resource/5h56-n989.json?county_name=San%20Diego%20County';
+      // 'https://data.cdc.gov/resource/5h56-n989.json?county_name=San%20Diego%20County&full_ct_num=0001.00';
+      'https://data.cdc.gov/resource/5h56-n989.json?county_name=San%20Diego%20County&full_ct_num=0041.00';
     fetch(url)
       .then(res => res.json())
       .then(
         result => {
-          console.log(result[0]);
+          console.log(result);
           this.setState({
             isLoaded: true,
             items: result
@@ -38,10 +44,11 @@ class App extends React.Component {
           });
         }
       );
+    this.setState({ apiUrl: url });
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, isLoaded, items, apiUrl } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -49,33 +56,30 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <SearchForm />
+          <Header />
+          <SearchForm apiUrl={apiUrl} />
           <MyLocation />
-          {/* <Rectangler iconname={faFacebook} area='my area' years='78.20' /> */}
           <Rectangler
-            iconname={faFacebook}
+            iconname={faHome}
             area={`census tract number - ${items[0].full_ct_num}`}
-            // years='78.20'
             years={items[0].le}
             text='years to live in this neighborhood'
           />
 
           <Rectangler
-            iconname={faTwitter}
-            // area='san diego county'
+            iconname={faCity}
             area={items[0].county_name}
             years={items[0].se_le}
             text='life expectancy county error'
           />
-          {/* <Rectangler iconname={faYoutube} area='california' years='80.90' /> */}
           <Rectangler
-            iconname={faYoutube}
+            iconname={faCannabis}
             area={items[0].state_name}
             years={items[0].le_range}
             text='life expectancy range in years'
           />
           <Rectangler
-            iconname={faInstagram}
+            iconname={faFlagUsa}
             area='united states'
             years='78.60'
             text='years, the static data'
