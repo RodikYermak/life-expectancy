@@ -22,7 +22,7 @@ const SearchForm = ({ apiUrl = 'Default Unknown', value }) => {
         />
         <input type='submit' value='Submit' className='find-button' />
       </form>
-      <p className='api'>API {apiUrl}</p>
+      <p className='api message-box'>API {apiUrl}</p>
     </div>
   );
 };

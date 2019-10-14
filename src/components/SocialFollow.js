@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faYoutube,
+  // faYoutube,
   faFacebook,
   faTwitter,
   faInstagram
@@ -11,15 +11,15 @@ import {
 const SocialFollow = () => {
   return (
     <div className='social-container App'>
-      <h3>Let's keep in touch</h3>
-      <a
+      <h3>Share your feedback here</h3>
+      {/* <a
         href='https://www.youtube.com'
         target='_blank'
         rel='noopener noreferrer'
         className='youtube social'
       >
         <FontAwesomeIcon icon={faYoutube} size='2x' />
-      </a>
+      </a> */}
       <a
         href='https://www.facebook.com'
         target='_blank'

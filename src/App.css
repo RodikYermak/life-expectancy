@@ -1,5 +1,12 @@
 body {
   box-sizing: border-box;
+  max-width: 960px;
+  margin: auto;
+  /* background-color: green; */
+  background-image: url('./components/assets/life-cycle.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .App {
   text-align: center;
@@ -10,7 +17,8 @@ body {
 }
 
 .App-header {
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-image: linear-gradient(to right, red, orange);
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -19,6 +27,12 @@ body {
   font-size: calc(10px + 2vmin);
   /* color: white; */
   margin-top: 0;
+  font-family: 'Long Cang', cursive;
+  font-size: 3rem;
+  /* color: #eee; */
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 
 .App-link {
@@ -99,13 +113,20 @@ input[type='text']:focus {
 .find-button:hover {
   box-shadow: 2px 2px 3px 1px grey;
 }
+.mylocation-button:hover {
+  box-shadow: 2px 2px 3px 1px grey;
+}
 
 /* SOCIAL STUFF */
 .social-container {
-  background: #eee;
+  /* background: #eee; */
+  background-image: linear-gradient(to right, orange, red);
   padding: 10px;
   margin-top: 10px;
   height: 100px;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 a.social {
   margin: 0 1rem;
@@ -142,7 +163,37 @@ a.instagram {
 .mylocation-button {
   width: 100px;
   height: 50px;
-  background-color: red;
+  /* background-color: red; */
+  background-image: linear-gradient(to right, red, orange);
   margin: 20px 45%;
   cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+}
+
+.message-box {
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9c2a;
+  z-index: 1;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  overflow: scroll;
+}
+
+.message-box2 {
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff9c2a;
+  z-index: 1;
+  /* border: 2px solid #ccc; */
+  border-radius: 20px;
+  overflow: scroll;
+  word-break: break-all;
+  padding: 5px;
 }

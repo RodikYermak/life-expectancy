@@ -40,7 +40,7 @@ const MyLocation = () => {
         My Location Button
       </button>
       <p id='status' className='App'></p>
-      <p id='map-link' className='App'></p>
+      <p id='map-link' className='App message-box2'></p>
     </div>
   );
 };
